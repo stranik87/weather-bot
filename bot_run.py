@@ -16,6 +16,7 @@ def main() -> None:
 
     # handlers
     dispatcher.add_handler(CommandHandler('start', handlers.start))
+    dispatcher.add_handler(MessageHandler(Filters.location, handlers.weather))
     
 
     # start polling
